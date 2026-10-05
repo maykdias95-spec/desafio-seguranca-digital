@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desafio da Segurança Digital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">🛡️ Segurança Digital</div>
+  <span>Projeto de Extensão</span>
+</header>
+
+<main>
+<section id="inicio" class="tela">
+  <div class="hero">
+    <div>
+      <p class="tag">DESAFIO INTERATIVO</p>
+      <h1>Você está preparado para se proteger na internet?</h1>
+      <p class="descricao">Aprenda de forma divertida a criar senhas fortes, utilizar autenticação em dois fatores e reconhecer tentativas de phishing.</p>
+      <button onclick="iniciar()">Começar desafio →</button>
+    </div>
+    <div class="escudo">🛡️</div>
+  </div>
+
+  <div class="cards">
+    <div><b>🔐 Senhas</b><small>Crie senhas mais seguras</small></div>
+    <div><b>🛡️ 2FA</b><small>Proteja suas contas</small></div>
+    <div><b>🎣 Phishing</b><small>Reconheça golpes</small></div>
+  </div>
+</section>
+
+<section id="quiz" class="tela escondido">
+  <div class="topo-quiz">
+    <div>
+      <p id="fase">FASE 1 DE 3</p>
+      <h2 id="titulo-fase">Desafio da Senha Forte</h2>
+    </div>
+    <div class="pontos">⭐ <span id="pontos">0</span> pontos</div>
+  </div>
+
+  <div class="barra"><div id="progresso"></div></div>
+
+  <div class="quiz-card">
+    <div id="icone" class="icone">🔐</div>
+    <p id="contador" class="contador">Pergunta 1 de 6</p>
+    <h2 id="pergunta"></h2>
+    <p id="explicacao"></p>
+    <div id="alternativas"></div>
+    <div id="feedback" class="feedback escondido"></div>
+    <button id="proxima" class="proxima" onclick="proxima()" disabled>Próxima pergunta →</button>
+  </div>
+
+  <button class="voltar" onclick="voltarInicio()">Sair do desafio</button>
+</section>
+
+<section id="resultado" class="tela escondido resultado">
+  <div id="medalha">🏆</div>
+  <p class="tag">MISSÃO CONCLUÍDA</p>
+  <h1 id="resultadoTitulo"></h1>
+  <p id="resultadoTexto"></p>
+  <div class="numero"><strong id="pontuacaoFinal">0</strong><span>de 50 pontos</span></div>
+  <div class="barra"><div id="barraFinal"></div></div>
+  <p id="resumo" class="resumo"></p>
+  <button onclick="iniciar()">Jogar novamente ↻</button>
+  <button class="secundario" onclick="mostrarDicas()">Rever dicas de segurança</button>
+</section>
+
+<section id="dicas" class="dicas">
+  <p class="tag">APRENDA E SE PROTEJA</p>
+  <h2>3 hábitos para ficar mais seguro</h2>
+  <p>Pequenas atitudes podem dificultar muito a ação de golpistas.</p>
+
+  <div class="dica-grid">
+    <article>
+      <div class="dica-icone">🔐</div>
+      <h3>Use senhas fortes</h3>
+      <p>Prefira senhas longas, únicas e difíceis de adivinhar.</p>
+      <ul>
+        <li>Não reutilize a mesma senha.</li>
+        <li>Evite nomes e datas.</li>
+        <li>Use um gerenciador de senhas quando possível.</li>
+      </ul>
+    </article>
+
+    <article>
+      <div class="dica-icone">🛡️</div>
+      <h3>Ative o 2FA</h3>
+      <p>O segundo fator acrescenta uma camada de proteção além da senha.</p>
+      <ul>
+        <li>Ative o recurso nas contas importantes.</li>
+        <li>Prefira aplicativo autenticador ou chave de segurança quando possível.</li>
+        <li>Nunca compartilhe códigos.</li>
+      </ul>
+    </article>
+
+    <article>
+      <div class="dica-icone">🎣</div>
+      <h3>Cuidado com phishing</h3>
+      <p>Golpistas tentam enganar você para entregar dados ou clicar em links perigosos.</p>
+      <ul>
+        <li>Desconfie de urgência e ameaças.</li>
+        <li>Confira o endereço do site.</li>
+        <li>Use o aplicativo ou site oficial.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="alerta">💡 <b>Regra de ouro:</b> nunca informe sua senha ou código de autenticação por links recebidos em mensagens.</div>
+</section>
+</main>
+
+<footer>
+  <b>🛡️ Desafio da Segurança Digital</b>
+  <span>Aprender hoje. Navegar com mais segurança amanhã.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
